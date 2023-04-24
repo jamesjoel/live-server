@@ -18,6 +18,10 @@ app.get("/api/teacher", async(req, res)=>{
     res.send(result);
 })
 
+app.get("*", (req, res)=>{
+    res.sendFile(__dirname+"/index.html");
+})
+
 const port = process.env.PORT || 3001;
 app.listen(port, ()=>{
     console.log("server running with port ", port)
