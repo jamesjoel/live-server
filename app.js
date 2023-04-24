@@ -18,7 +18,7 @@ app.get("/api/teacher", async(req, res)=>{
     res.send(result);
 })
 
-app.get("*", (req, res)=>{
+app.get("/", (req, res)=>{
     res.sendFile(__dirname+"/index.html");
 })
 
